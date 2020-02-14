@@ -115,7 +115,7 @@ CM2.1p1
 ###
 ### diagnostic fields
 # "ocean_model","hblt","hblt","ocean_month","all",.true.,"none",2
-# "ocean_model","mld","mld","ocean_month","all",.true.,"none",2
+ "ocean_model","mld","mld","ocean_month","all",.true.,"none",2
 # "ocean_model","neutral_rho","neutral_rho","ocean_month","all",.true.,"none",2
 # "ocean_model","pot_rho","pot_rho_2k","ocean_month","all",.true.,"none",2
 # "ocean_model","pot_rho_0","pot_rho_0","ocean_month","all",.true.,"none",2
