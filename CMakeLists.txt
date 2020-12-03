@@ -195,6 +195,13 @@ if (CMAKE_Fortran_COMPILER_ID MATCHES Intel AND CMAKE_BUILD_TYPE MATCHES Release
    set(CMAKE_Fortran_FLAGS_RELEASE "${GEOS_Fortran_Release_Flags} ${common_Fortran_Flags} -stack_temps -safe_cray_ptr -assume byterecl -fp-model precise -fp-model source -ftz -align all -fno-alias -align dcommons ${GEOS_Fortran_Release_FPE_Flags} ${ALIGNCOM}")
 endif ()
 
+# This 'resets' the Intel DEBUG flags for MOM5. The stock debug flags use
+# 'all,noarg_temp_created' which seem to be too aggressive for FMS/MOM5. This
+# moves them back to the 'bounds,uninit' GEOS used to build with.
+if (CMAKE_Fortran_COMPILER_ID MATCHES "Intel" AND CMAKE_BUILD_TYPE MATCHES Debug)
+   string(REPLACE "all,noarg_temp_created" "bounds,uninit" _tmp "${GEOS_Fortran_FLAGS_DEBUG}")
+   set (CMAKE_Fortran_FLAGS_DEBUG "${_tmp}")
+endif ()
 
 if (CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
    target_compile_definitions (${this} PRIVATE NO_R16 NO_CRAY_POINTERS)
