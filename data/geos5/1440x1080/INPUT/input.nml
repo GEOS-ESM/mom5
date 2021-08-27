@@ -187,9 +187,11 @@
 	use_this_module = .FALSE.
 /
 
- &ocean_increment_tracer_nml
-	use_this_module = .FALSE.
-/
+>>>withODAS<<< &ocean_increment_tracer_nml
+>>>withODAS<<<        use_this_module=.TRUE.
+>>>withODAS<<<        days_to_increment = 0
+>>>withODAS<<<        secs_to_increment = 64800
+>>>withODAS<<</
 
  &ocean_increment_velocity_nml
 	use_this_module = .FALSE.
@@ -371,9 +373,9 @@
       read_restore_mask=.false.
       restore_mask_gfdl=.false.
       max_ice_thickness=1.0
-      zero_net_water_restore=.false.
-      zero_net_water_coupler=.false.
-      zero_net_water_couple_restore=.false.
+>>>COUPLED_DUAL<<<      zero_net_water_restore=.true.
+>>>COUPLED_DUAL<<<      zero_net_water_coupler=.true.
+>>>COUPLED_DUAL<<<      zero_net_water_couple_restore=.true.
       zero_net_salt_restore=.false.
       avg_sfc_velocity=.false.
       avg_sfc_temp_salt_eta=.false.
