@@ -182,7 +182,7 @@ set (SRCS
 
 esma_add_library (${this}
   SRCS ${SRCS}
-  DEPENDENCIES FMS::FMS NetCDF::NetCDF_Fortran
+  DEPENDENCIES FMS::fms_r8
   INCLUDES 
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/mom5/ocean_param/gotm-4.0/include> 
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/mom5/ocean_core>
@@ -192,7 +192,7 @@ esma_add_library (${this}
 target_compile_definitions (${this} PRIVATE MAPL_MODE EIGHT_BYTE SPMD TIMING use_libMPI use_netCDF USE_OCEAN_BGC)
 
 if (CMAKE_Fortran_COMPILER_ID MATCHES Intel AND CMAKE_BUILD_TYPE MATCHES Release)
-   set(CMAKE_Fortran_FLAGS_RELEASE "${GEOS_Fortran_Release_Flags} ${common_Fortran_Flags} -stack_temps -safe_cray_ptr -assume byterecl -fp-model precise -fp-model source -ftz -align all -fno-alias -align dcommons ${GEOS_Fortran_Release_FPE_Flags} ${ALIGNCOM}")
+   set(CMAKE_Fortran_FLAGS_RELEASE "${GEOS_Fortran_Release_Flags} ${common_Fortran_Flags} -stack-temps -safe-cray-ptr -assume byterecl -fp-model precise -fp-model source -ftz -align all -fno-alias -align dcommons ${GEOS_Fortran_Release_FPE_Flags} ${ALIGNCOM}")
 endif ()
 
 
