@@ -182,7 +182,7 @@ set (SRCS
 
 esma_add_library (${this}
   SRCS ${SRCS}
-  DEPENDENCIES FMS::fms_r8
+  DEPENDENCIES fms_r8
   INCLUDES 
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/mom5/ocean_param/gotm-4.0/include> 
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/mom5/ocean_core>
