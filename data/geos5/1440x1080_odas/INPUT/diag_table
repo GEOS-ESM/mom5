@@ -1,5 +1,5 @@
 M2OCEAN_S2SV3
-1981 12 27 0 0 0 <-- START date
+1981 12 27 0 0 0
 
 #output files
 "ocean_daily",   24,  "hours", 1, "days", "time",

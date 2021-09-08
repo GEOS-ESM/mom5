@@ -227,7 +227,7 @@
 	surface_height_split = 1
 	barotropic_split = 80
 	debug=.false.
-	layout= 36,10
+	layout= 40,30
 	io_layout = 1,1
 	impose_init_from_restart=.true.	
 /
