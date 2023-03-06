@@ -374,7 +374,7 @@
       restore_mask_gfdl=.false.
       max_ice_thickness=1.0
       zero_net_water_restore=.false.
-      zero_net_water_coupler=.fasle.
+      zero_net_water_coupler=.false.
       zero_net_water_couple_restore=.false.
       zero_net_salt_restore=.false.
       avg_sfc_velocity=.false.
