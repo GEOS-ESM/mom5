@@ -437,8 +437,8 @@
 /
 
  &ocean_sponges_tracer_nml
-	use_this_module = .FALSE.
-	damp_coeff_3d = .FALSE.
+	use_this_module = .TRUE.
+	damp_coeff_3d = .TRUE.
 /
 
  &ocean_sponges_velocity_nml
