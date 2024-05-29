@@ -64,6 +64,16 @@ set (SRCS
   src/mom5/ocean_param/gotm-4.0/turbulence/potentialml.F90 
   src/mom5/ocean_core/ocean_coriolis.F90 
   src/mom5/ocean_param/lateral/ocean_bihcgrid_friction.F90
+  src/shared/drifters/drifters.F90
+  src/shared/drifters/drifters_combine
+  src/shared/drifters/drifters_comm.F90
+  src/shared/drifters/drifters_compute_k.h
+  src/shared/drifters/drifters_core.F90
+  src/shared/drifters/drifters_input.F90
+  src/shared/drifters/drifters_io.F90
+  src/shared/drifters/drifters_push.h
+  src/shared/drifters/drifters_set_field.h
+  src/shared/drifters/cloud_interpolator.F90
   src/mom5/ocean_diag/ocean_drifters.F90 
   src/mom5/ocean_param/gotm-4.0/util/ode_solvers.F90 
   src/ice_sis/ice_dyn.F90
